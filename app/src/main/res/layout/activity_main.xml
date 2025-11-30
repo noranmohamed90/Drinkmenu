@@ -7,12 +7,69 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/drinkTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="20dp"
+        android:text="ORDER DRINK"
+        android:textStyle="bold"
+        android:textColor="@color/dark_green"
+        android:textSize="32sp"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/orderTF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/drinkTV"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
+        android:hint="Choose your drink"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        >
+    <AutoCompleteTextView
+        android:id="@+id/menuComplete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/drinkTV"
+        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="none"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/totalPriceTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderTF"
+        android:text="Total price :"
+        android:textStyle="bold"
+        android:textColor="@color/gray"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+        />
+    <TextView
+        android:id="@+id/priceTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/totalPriceTV"
+        app:layout_constraintTop_toBottomOf="@id/orderTF"
+        android:text="15"
+        android:textColor="@color/gray"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="23dp"
+        android:textSize="18dp"
+        />
+    <Button
+        android:id="@+id/submittedBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="272dp"
+        android:text="Submit Order"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
